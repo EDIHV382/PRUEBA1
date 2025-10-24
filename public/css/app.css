@@ -1,0 +1,12 @@
+/* assets/styles/app.css */
+@import "./Dark-Light.css"; 
+
+/* 1. Importar librerías de node_modules */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@mdi/font/css/materialdesignicons.min.css";
+
+/* 2. Importar TUS ESTILOS PERSONALIZADOS */
+/* Contiene las variables de color y estilos base */
+
+/* Contiene los estilos específicos del panel de la clínica */
+@import "./appClinica.css";

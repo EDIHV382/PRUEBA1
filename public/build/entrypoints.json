@@ -1,0 +1,27 @@
+{
+  "entrypoints": {
+    "app-clinica": {
+      "js": [
+        "/build/runtime.61274639.js",
+        "/build/715.3e1c94a8.js",
+        "/build/587.fd7da7f3.js",
+        "/build/app-clinica.39f17a8a.js"
+      ],
+      "css": [
+        "/build/715.d0d4c842.css",
+        "/build/app-clinica.13b7691b.css"
+      ]
+    },
+    "app-public": {
+      "js": [
+        "/build/runtime.61274639.js",
+        "/build/715.3e1c94a8.js",
+        "/build/app-public.c510685c.js"
+      ],
+      "css": [
+        "/build/715.d0d4c842.css",
+        "/build/app-public.e6581588.css"
+      ]
+    }
+  }
+}
