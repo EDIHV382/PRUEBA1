@@ -1,0 +1,156 @@
+/* =================================================================
+   1. VARIABLES Y ESTILOS GLOBALES ESENCIALES
+================================================================= */
+:root {
+  --color-primary: #1e40af;
+  --color-primary-dark: #1e3a8a;
+  --color-primary-light: #3b82f6;
+  --color-bg: #ffffff;
+  --color-sidebar: #ffffff;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-danger: #dc2626;
+  --shadow-sm: rgba(0, 0, 0, 0.05);
+  --shadow-md: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  
+}
+
+/* =================================================================
+   ANIMACIÓN DE TRANSICIÓN PARA MODO OSCURO/CLARO
+================================================================= */
+body, .card, .navbar, h1, h2, h3, h4, p, a, span, button, .info-card, .fundamento-card, .theme-toggle-button, .table {
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: var(--color-primary-dark);
+}
+
+/* =================================================================
+   2. MODO OSCURO (DARK MODE)
+================================================================= */
+body.dark-mode {
+  --color-primary: #60a5fa;
+  --color-primary-dark: #3b82f6;
+  --color-primary-light: #93c5fd;
+  --color-bg: #0f172a;
+  --color-sidebar: #1e293b;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-border: #334155;
+  --color-danger: #f87171;
+  --shadow-sm: rgba(0, 0, 0, 0.1);
+  --shadow-md: rgba(0, 0, 0, 0.2);
+}
+
+/* --- Tablas --- */
+.table {
+  --bs-table-color: var(--color-text);
+  --bs-table-bg: transparent;
+  --bs-border-color: var(--color-border);
+  color: var(--bs-table-color);
+}
+.table thead {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+.table tbody tr:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+/* Tablas modo oscuro */
+body.dark-mode .table {
+  --bs-table-color: var(--color-text);
+  --bs-border-color: var(--color-border);
+}
+body.dark-mode .table thead {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text);
+}
+body.dark-mode .table tbody tr:hover {
+  background-color: rgba(255,255,255,0.07);
+}
+body.dark-mode .table .text-danger {
+    color: var(--color-danger) !important;
+}
+ 
+
+/* --- Contenedor Principal del Navbar --- */
+.navbar {
+    z-index: 1040;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-sidebar);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 2px 8px var(--shadow-sm);
+    height: 73px; /* Altura consistente con el header del sidebar */
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text) !important;
+}
+
+.navbar-brand img {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* --- Botones de Iconos (Menú y Modo Oscuro) --- */
+.navbar-icon-button {
+    background-color: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.navbar-icon-button:hover,
+.navbar-icon-button:focus {
+    color: var(--color-text);
+    background-color: var(--color-border);
+    outline: none;
+}
+
+/* --- Perfil de Usuario --- */
+.user-profile {
+    color: var(--color-text);
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.user-name-text {
+    font-size: 0.95rem;
+}

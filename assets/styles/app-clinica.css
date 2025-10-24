@@ -1,0 +1,8 @@
+/* Importa los estilos base y de tema */
+@import "./Dark-Light.css"; 
+
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@mdi/font/css/materialdesignicons.min.css";
+
+@import "./appClinica.css";

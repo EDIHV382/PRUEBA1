@@ -1,0 +1,190 @@
+/* =================================================================
+   BLOG PÚBLICO - DISEÑO PROFESIONAL
+================================================================= */
+body{
+    padding-top: 70px;
+}
+/* --- Sección Hero --- */
+.blog-hero {
+    background-color: var(--color-bg);
+    padding: 4rem 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text);
+    max-width: 600px;
+    margin: 1rem auto 0;
+}
+
+/* --- Título de Sección --- */
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+/* Importa una fuente serif para los títulos destacados */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap');
+
+/* =================================================================
+   1. ESTRUCTURA GENERAL DEL BLOG
+================================================================= */
+.blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.blog-header {
+    background-color: #fff;
+    padding: 2rem 0;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.blog-header-title { 
+    font-size: 2.5rem; 
+    font-weight: 700; 
+}
+.blog-header-subtitle { 
+    font-size: 1.1rem; 
+    color: #6c757d; 
+}
+
+/* =================================================================
+   2. FILTROS DE CATEGORÍA
+================================================================= */
+.category-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #eee;
+}
+.category-filters .filter-item {
+    color: #6c757d;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.category-filters .filter-item.active,
+.category-filters .filter-item:hover {
+    color: #000;
+}
+
+/* =================================================================
+   3. TARJETA ESTÁNDAR (CUANDO HAY VARIOS POSTS)
+================================================================= */
+.post-card-standard {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.post-card-standard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.post-card-standard .post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.post-card-standard .post-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.post-card-standard .post-category {
+    color: #6d63ff; /* Un tono violeta como en la imagen */
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.post-card-standard .post-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #212529;
+    margin: 0.5rem 0;
+    text-decoration: none;
+}
+.post-card-standard .post-excerpt {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+.post-card-standard .post-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #adb5bd;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1rem;
+    margin-top: auto;
+}
+.post-card-standard .post-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* =================================================================
+   4. TARJETA DESTACADA (CUANDO SOLO HAY 1 POST)
+================================================================= */
+.post-card-featured {
+    position: relative;
+    min-height: 450px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.post-card-featured::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(15, 23, 42, 0.7); /* Overlay oscuro */
+    z-index: 1;
+}
+.post-card-featured .post-content-featured {
+    position: relative;
+    z-index: 2;
+    padding: 3rem;
+    max-width: 600px;
+}
+.post-card-featured .featured-quote-icon {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: rgba(255,255,255,0.5);
+}
+.post-card-featured .post-title-featured {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+.post-card-featured .post-excerpt-featured {
+    font-size: 1.1rem;
+    color: #ced4da;
+    margin: 1rem 0 1.5rem;
+}

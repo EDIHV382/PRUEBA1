@@ -1,0 +1,9 @@
+/* Importa los estilos base y de tema */
+@import "./Dark-Light.css"; 
+
+/* Importar librerías */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@mdi/font/css/materialdesignicons.min.css";
+
+/* Importa los estilos específicos del blog público */
+@import "./appPublic.css";

@@ -1,0 +1,174 @@
+
+/* --- Adaptación para Modo Oscuro (heredado de las variables) --- */
+body.dark-mode .user-avatar {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text);
+}
+/* =================================================================
+   LAYOUT DE GESTIÓN "COMMAND CENTER"
+================================================================= */
+.page-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; }
+.page-title { font-size: 1.8rem; font-weight: 700; color: var(--color-text); margin: 0; }
+.page-subtitle { font-size: 1.1rem; color: var(--color-text); margin-top: 0.25rem; }
+
+.command-center-layout { max-width: 1600px; margin: 0 auto; }
+.command-sidebar {
+    background-color: var(--color-sidebar); border: 1px solid var(--color-border);
+    border-radius: 1rem; padding: 2rem; height: 100%; box-shadow: 0 4px 15px var(--shadow-sm);
+}
+.sidebar-title { color: var(--color-primary); font-weight: 700; }
+.sidebar-section { padding-top: 1.5rem; border-top: 1px solid var(--color-border); margin-top: 1.5rem; }
+.section-heading {
+    font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--color-text); margin-bottom: 1rem;
+}
+.sidebar-stats li { display: flex; justify-content: space-between; margin-bottom: 0.5rem; color: var(--color-text); }
+
+.main-content-card {
+    background-color: var(--color-sidebar); border: 1px solid var(--color-border);
+    border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 15px var(--shadow-sm);
+    display: flex; flex-direction: column; height: 100%; min-height: 70vh;
+}
+.main-content-card .card-header { padding: 1.5rem 2rem; border-bottom: 1px solid var(--color-border); }
+.main-content-card .card-title { font-size: 1.3rem; font-weight: 700; color: var(--color-text); }
+.main-content-card .card-body { flex-grow: 1; }
+.main-content-card .card-footer { padding: 1rem 2rem; border-top: 1px solid var(--color-border); background-color: var(--color-bg); }
+body.dark-mode .main-content-card .card-footer { background-color: var(--color-sidebar); }
+
+/* --- Barra de búsqueda --- */
+.input-group.search-input-group .form-control {
+    border-radius: 0.5rem 0 0 0.5rem; background-color: var(--color-bg);
+    border-color: var(--color-border); color: var(--color-text);
+}
+.input-group.search-input-group .form-control::placeholder { color: var(--color-text); }
+.input-group.search-input-group .form-control:focus {
+    border-color: var(--color-primary); box-shadow: 0 0 0 0.15rem rgba(var(--bs-primary-rgb), .25);
+    background-color: var(--color-sidebar);
+}
+.input-group.search-input-group .input-group-text {
+    background-color: var(--color-bg); border-color: var(--color-border);
+    border-radius: 0 0.5rem 0.5rem 0; color: var(--color-text);
+}
+body.dark-mode .input-group.search-input-group .form-control,
+body.dark-mode .input-group.search-input-group .input-group-text { background-color: var(--color-sidebar); }
+
+/* --- Tabla --- */
+.command-table thead { background-color: var(--color-bg); }
+body.dark-mode .command-table thead { background-color: var(--color-sidebar); }
+.command-table th {
+    font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+    color: var(--color-text); border-bottom: 1px solid var(--color-border); padding: 1.2rem 1.5rem;
+}
+.command-table td { padding: 1.2rem 1.5rem; vertical-align: middle; color: var(--color-text); border-bottom: 1px solid var(--color-border); }
+.command-table tbody tr:last-child td { border-bottom: none; }
+.command-table .btn-outline-secondary { border-color: var(--color-border); color: var(--color-text); }
+.command-table .btn-outline-secondary:hover { background-color: var(--color-primary-light); color: white; border-color: var(--color-primary-light); }
+
+/* --- Paginación --- */
+.pagination {
+    --bs-pagination-color: var(--color-primary); --bs-pagination-hover-color: var(--color-primary-dark);
+    --bs-pagination-active-bg: var(--color-primary); --bs-pagination-active-border-color: var(--color-primary);
+    --bs-pagination-disabled-color: var(--color-text); justify-content: center;
+}
+
+/* =================================================================
+   ESTILOS PARA MODALES Y FORMULARIOS
+================================================================= */
+.modal-content {
+    background-color: var(--color-sidebar); border: 1px solid var(--color-border);
+    border-radius: 1rem; box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+.modal-header { background-color: var(--color-bg); border-bottom: 1px solid var(--color-border); padding: 1.5rem; }
+body.dark-mode .modal-header { background-color: var(--color-sidebar); }
+.modal-title { font-weight: 700; color: var(--color-text); }
+.modal-body { padding: 2rem; color: var(--color-text); }
+.modal-footer { background-color: var(--color-bg); border-top: 1px solid var(--color-border); padding: 1rem 1.5rem; }
+body.dark-mode .modal-footer { background-color: var(--color-sidebar); }
+.btn-close { --bs-btn-close-color: var(--color-text); }
+body.dark-mode .btn-close { --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%); }
+
+/* --- Formularios --- */
+.form-label { font-weight: 600; color: var(--color-text); margin-bottom: 0.5rem; }
+.form-control, .form-select {
+    padding: 0.8rem 1rem; border-radius: 0.5rem; background-color: var(--color-bg);
+    border: 1px solid var(--color-border); color: var(--color-text);
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-primary); box-shadow: 0 0 0 0.15rem rgba(var(--bs-primary-rgb), .25);
+    background-color: var(--color-sidebar);
+}
+/* Formularios en MODO OSCURO */
+body.dark-mode .form-control, 
+body.dark-mode .form-select {
+    background-color: var(--color-bg); 
+    color: var(--color-text) !important; /* ! SOLUCIÓN DEFINITIVA ! */
+    border-color: var(--color-border);
+}
+body.dark-mode .form-control:focus, 
+body.dark-mode .form-select:focus {
+    background-color: var(--color-sidebar); 
+    border-color: var(--color-primary); 
+}
+body.dark-mode .form-control::placeholder { color: var(--color-text); }
+
+/* --- Indicadores de Estado (Badges) --- */
+.status-badge { display: inline-block; padding: 0.3em 0.65em; font-size: 0.75em; font-weight: 700; text-align: center; border-radius: 0.375rem; }
+.status-badge-success { color: #155724; background-color: #d4edda; }
+.status-badge-secondary { color: #383d41; background-color: #e2e3e5; }
+body.dark-mode .status-badge-success { color: #a3cfbb; background-color: rgba(25, 135, 84, 0.3); }
+body.dark-mode .status-badge-secondary { color: #adb5bd; background-color: rgba(108, 117, 125, 0.3); }
+
+.table-responsive .dropdown {
+        position: static;
+}
+
+/* =================================================================
+   DISEÑO DE VISTA BASADO EN TARJETAS (PARA PACIENTES/CONSULTAS)
+================================================================= */
+
+/* --- Cabecera de la Vista --- */
+.card-grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.card-grid-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
+}
+.card-grid-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+}
+
+/* --- Barra de Búsqueda --- */
+.card-grid-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+}
+.card-grid-toolbar .search-input-group {
+    max-width: 400px;
+    flex-grow: 1;
+    display: flex;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: var(--color-surface);
+}
+.card-grid-toolbar .search-input-group .form-control {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
